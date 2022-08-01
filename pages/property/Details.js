@@ -10,9 +10,9 @@
 //         <div>
 //            <div>Property {id}</div> 
 //            <div>
-//            <div className="p-example__body">
-//             <div className="p-example__splide">
-//             <Splide className="splide" id="example-grid" 
+//            <div ClassNameName="p-example__body">
+//             <div ClassNameName="p-example__splide">
+//             <Splide ClassNameName="splide" id="example-grid" 
 //             options={
 //                 {
 //                    type: 'loop',
@@ -31,28 +31,28 @@
 //             }
 //             >
                 
-//                 <SplideTrack className="splide__track">
+//                 <SplideTrack ClassNameName="splide__track">
 //                     <GridComponent>
-//                         <ul class="splide__list">
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">01</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">02</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">03</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">04</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">05</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">06</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">07</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">08</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">09</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">10</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">11</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">12</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">13</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">14</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">15</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">16</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">17</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">18</span></SplideSlide>
-//                     <SplideSlide className="p-splide__slide splide__slide"><span className="p-splide__slide-number">19</span></SplideSlide>
+//                         <ul ClassName="splide__list">
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">01</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">02</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">03</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">04</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">05</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">06</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">07</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">08</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">09</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">10</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">11</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">12</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">13</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">14</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">15</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">16</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">17</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">18</span></SplideSlide>
+//                     <SplideSlide ClassNameName="p-splide__slide splide__slide"><span ClassNameName="p-splide__slide-number">19</span></SplideSlide>
 //                 </ul>
 //                     </GridComponent>
                 

@@ -12,25 +12,25 @@ const Navbar = () => {
 }, []);
 const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className='w-full z-10 fixed'>
-      <div className="w-5/6  flex m-auto justify-between  text-white py-4">
-        <div className="logo w-36 md:w-44">
+    <div ClassNameName='w-full z-10 fixed'>
+      <div ClassNameName="w-5/6  flex m-auto justify-between  text-white py-4">
+        <div ClassNameName="logo w-36 md:w-44">
           <img 
           src='/images/logo.png'
          
           />
         </div>
-        <div className="links lg:flex gap-6 my-auto font-semibold text-sm font-inter hidden">
-          <div className='btn pointer bg-transparent text-white hover:bg-transparent'><Link href='/'>Home</Link></div>
-          <div className='btn pointer bg-transparent text-white hover:bg-transparent'><Link href='/'>About Us</Link></div>
-          <div className='btn pointer bg-transparent text-white hover:bg-transparent'><Link href='/'>Other Projects</Link></div>
-          <div className='btn pointer '><Link href='/'>Enquire Now</Link></div>
+        <div ClassNameName="links lg:flex gap-6 my-auto font-semibold text-sm font-inter hidden">
+          <div ClassNameName='btn pointer bg-transparent text-white hover:bg-transparent'><Link href='/'>Home</Link></div>
+          <div ClassNameName='btn pointer bg-transparent text-white hover:bg-transparent'><Link href='/'>About Us</Link></div>
+          <div ClassNameName='btn pointer bg-transparent text-white hover:bg-transparent'><Link href='/'>Other Projects</Link></div>
+          <div ClassNameName='btn pointer '><Link href='/'>Enquire Now</Link></div>
         </div>
-        <div className="mobile-menu  lg:hidden ">
+        <div ClassNameName="mobile-menu  lg:hidden ">
                             <button onClick = {() => setIsOpen(!isOpen)}>
                                 {!isOpen ? (
                                     <svg
-                                        className="block h-8 w-8"
+                                        ClassNameName="block h-8 w-8"
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
@@ -46,7 +46,7 @@ const [isOpen, setIsOpen] = useState(false);
                                     </svg>
                                     ) : (
                                     <svg
-                                        className="block h-8 w-8"
+                                        ClassNameName="block h-8 w-8"
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
@@ -78,12 +78,12 @@ const [isOpen, setIsOpen] = useState(false);
         leaveTo="opacity-0 scale-95"
         >
             {isOpen && (
-                <div  className="mobile-nav aos-init aos-animate lg:hidden index-10 w-full bg-red-500" id="mobile-menu">
-                    <div data-aos='flip-down'  className="mobile-nav aos-init aos-animate   absolute w-screen text-center h-auto  pb-10">
-                    <div className='btn pointer bg-transparent text-white hover:bg-transparent block'><Link href='/'>Home</Link></div>
-                    <div className='btn pointer bg-transparent text-white hover:bg-transparent block'><Link href='/'>About Us</Link></div>
-                    <div className=' btn pointer bg-transparent text-white hover:bg-transparent block'><Link href='/'>Other Projects</Link></div>
-                    <div className='btn pointer block'><Link href='/'>Enquire Now</Link></div>
+                <div  ClassNameName="mobile-nav aos-init aos-animate lg:hidden index-10 w-full bg-red-500" id="mobile-menu">
+                    <div data-aos='flip-down'  ClassNameName="mobile-nav aos-init aos-animate   absolute w-screen text-center h-auto  pb-10">
+                    <div ClassNameName='btn pointer bg-transparent text-white hover:bg-transparent block'><Link href='/'>Home</Link></div>
+                    <div ClassNameName='btn pointer bg-transparent text-white hover:bg-transparent block'><Link href='/'>About Us</Link></div>
+                    <div ClassNameName=' btn pointer bg-transparent text-white hover:bg-transparent block'><Link href='/'>Other Projects</Link></div>
+                    <div ClassNameName='btn pointer block'><Link href='/'>Enquire Now</Link></div>
                         
                 
 

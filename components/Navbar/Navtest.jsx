@@ -15,32 +15,32 @@ const Navtest = () => {
     return (
        
         <div>
-            <nav className="  shadow-md fixed w-screen z-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-                    <div className=" flex items-center justify-between h-auto logo  lg:text-lg text-gray-100 w-full">
-                        <div className="mx-auto flex items-center w-full justify-between">
-                            <div className="flex-shrink-0">
+            <nav ClassNameName="  shadow-md fixed w-screen z-20">
+                <div ClassNameName="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+                    <div ClassNameName=" flex items-center justify-between h-auto logo  lg:text-lg text-gray-100 w-full">
+                        <div ClassNameName="mx-auto flex items-center w-full justify-between">
+                            <div ClassNameName="flex-shrink-0">
                                 <a href='/'>
-                                    <h1 className='text-bold text-teal text-6xl md:text-8xl lg:text-8xl xl:text-8xl'>F</h1>
+                                    <h1 ClassNameName='text-bold text-teal text-6xl md:text-8xl lg:text-8xl xl:text-8xl'>F</h1>
                                 </a>
                         
                             </div>
-                            <div className="hidden md:block lg:mr-4">
-                                <div className=" flex items-baseline space-x-10">
-                                    <a href="#!" className="hover:text-purple">
+                            <div ClassNameName="hidden md:block lg:mr-4">
+                                <div ClassNameName=" flex items-baseline space-x-10">
+                                    <a href="#!" ClassNameName="hover:text-purple">
                                         Home
                                     </a>
-                                    <a href="#about" className="hover:text-purple">
+                                    <a href="#about" ClassNameName="hover:text-purple">
                                         About
                                     </a>
-                                    <a href="#services" className="hover:text-purple">
+                                    <a href="#services" ClassNameName="hover:text-purple">
                                         Services
                                     </a>
                                     
-                                    <a href="#contact" className="hover:text-purple">
+                                    <a href="#contact" ClassNameName="hover:text-purple">
                                         Contact Me
                                     </a>
-                                    <a href="#projects" className="bg-gradient-purple  px-14 py-4 rounded-full">
+                                    <a href="#projects" ClassNameName="bg-gradient-purple  px-14 py-4 rounded-full">
                                         Projects
                                     </a>
                                 
@@ -48,11 +48,11 @@ const Navtest = () => {
                             </div>
                         </div>
                         {/* button to display menu */}
-                        <div className="mobile-menu md:hidden lg:hidden ">
+                        <div ClassNameName="mobile-menu md:hidden lg:hidden ">
                             <button onClick = {() => setIsOpen(!isOpen)}>
                                 {!isOpen ? (
                                     <svg
-                                        className="block h-8 w-8"
+                                        ClassNameName="block h-8 w-8"
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
@@ -68,7 +68,7 @@ const Navtest = () => {
                                     </svg>
                                     ) : (
                                     <svg
-                                        className="block h-8 w-8"
+                                        ClassNameName="block h-8 w-8"
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
@@ -99,35 +99,35 @@ const Navtest = () => {
                         leaveTo="opacity-0 scale-95"
                         >
                             {isOpen && (
-                                <div  className="aos-init aos-animate md:hidden index-10 w-full mobile-nav" id="mobile-menu">
-                                    <div data-aos='flip-down'  className="bg-nav-tp aos-init aos-animate -ml-4  absolute w-screen text-center h-auto bg-gray-700 pb-10">
+                                <div  ClassNameName="aos-init aos-animate md:hidden index-10 w-full mobile-nav" id="mobile-menu">
+                                    <div data-aos='flip-down'  ClassNameName="bg-nav-tp aos-init aos-animate -ml-4  absolute w-screen text-center h-auto bg-gray-700 pb-10">
                                         <a
                                         href="#about"
-                                        className="text-center hover:bg-gray-700 text-white block px-3 py-6 rounded-md text-2xl font-medium"
+                                        ClassNameName="text-center hover:bg-gray-700 text-white block px-3 py-6 rounded-md text-2xl font-medium"
                                         >
                                         About Me
                                         </a>
 
                                         <a
                                         href="#services"
-                                        className="text-center text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-6 rounded-md text-2xl font-medium"
+                                        ClassNameName="text-center text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-6 rounded-md text-2xl font-medium"
                                         >
                                         Services
                                         </a>
 
                                         <a
                                         href="#workflow"
-                                        className="text-center text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-6 rounded-md text-2xl font-medium"
+                                        ClassNameName="text-center text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-6 rounded-md text-2xl font-medium"
                                         >
                                         Workflow
                                         </a>
                                         <a
                                         href="#contact"
-                                        className="text-center text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-6 rounded-md text-2xl font-medium"
+                                        ClassNameName="text-center text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-6 rounded-md text-2xl font-medium"
                                         >
                                         Contact
                                         </a>
-                                        <a href="#projects" className="bg-purple px-14 py-4 rounded-full">
+                                        <a href="#projects" ClassNameName="bg-purple px-14 py-4 rounded-full">
                                         My Projects
                                         </a>
                                         
