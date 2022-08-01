@@ -2,15 +2,15 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='w-full footer'>
-      <div className="py-8 w-4/5 grid grid-cols-3 mx-auto  gap-2 text-white justify-between ">
-        <div className="footer-text w-">
+    <div className='w-full footer bg-red-500 pt-6'>
+      <div className="py-8 w-4/5 grid lg:grid-cols-3 mx-auto  gap-2 text-white justify-between ">
+        <div className="footer-text ">
           <img src='/images/logo.png' />
-          <p>Dream House</p>
-          <p className='mt-4  font-thin'>Dream Home is a gated community <br></br> with a great location. Located <br></br> downtown, you’re within walking <br></br> distance of Parks, and the...<a className='text-brand'>View More</a></p>
+          <p className='text-2xl md:text-base font-semibold'>Dream House</p>
+          <p className='mt-4  font-thin text-lg md:text-base'>Dream Home is a gated community <br></br> with a great location. Located <br></br> downtown, you’re within walking <br></br> distance of Parks, and the...<a className='text-brand'>View More</a></p>
         </div>
-        <div className="address ">
-          <p className='text-2xl'>Contact Us</p>
+        <div className="address mt-6 md:mt-0 text-lg md:text-base">
+          <p className='text-2xl'>Address</p>
           <p className='mt-4'>Deam home villas San <br></br>Diego, CA, USA</p>
           <div className='flex mt-3'>
             <span className='mt-1'><img src="/images/call-calling.png" alt="" /></span><p className='ml-2'>025-777-3067</p>
@@ -21,7 +21,7 @@ const Footer = () => {
           
         
         </div>
-        <div className="socials  ">
+        <div className="socials  mt-6 md:mt-0">
           <p className='text-2xl'>Contact Us</p>
           <div className="soc flex mt-4">
             <img src="/images/insta.png" alt="" />
@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
         
       </div>
-      <div className='text-center footer-down py-6 '><p>© 2022 Dandelion | All Rights Reserved</p></div>
+      <div className='textlg text-center footer-down py-6 '><p>© 2022 Dandelion | All Rights Reserved</p></div>
     </div>
   )
 }

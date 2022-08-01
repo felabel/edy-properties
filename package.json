@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.6",
     "@splidejs/react-splide": "^0.7.8",
+    "@splidejs/splide-extension-grid": "^0.4.1",
+    "aos": "^2.3.4",
     "axios": "^0.27.2",
     "dashify": "^2.0.0",
     "firebase": "^9.8.4",
@@ -20,6 +23,7 @@
     "react-firebase-hooks": "^5.0.3"
   },
   "devDependencies": {
+    "@iconify/react": "^3.2.2",
     "autoprefixer": "^10.4.7",
     "eslint": "8.18.0",
     "eslint-config-next": "12.2.0",

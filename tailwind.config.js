@@ -7,11 +7,12 @@ module.exports = {
   extend: {
     colors: {
       brand: '#FF9505',
+      light_bg: "rgba(0, 0, 0, 0.9)",
       
     },
     backgroundImage: {
-      'light-bg': "black",
-      'hero' : "url('/images/hero.jpg')",
+      'light-bg': "rgba(0, 0, 0, 0.9)",
+      'hero' : "url('/images/slideone.jpg')",
     },
   },
   theme: {
