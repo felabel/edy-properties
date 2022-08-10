@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import Properties from '../components/property/Properties';
+import propertyData from './propertyData';
 // import PropertyCard from './PropertyCard';
 // import db from '../../../utils/db';
 import db from '../firebase';
@@ -17,6 +18,7 @@ const Home = () => {
       <Layout>
         <Hero />
         <Properties />
+       <propertyData />
         <Map />
         <About />
         <Slide />

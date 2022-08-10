@@ -242,6 +242,7 @@ body {
   }
   .slide-container img{
     border-radius: 10px;
+    border: 0;
   }
   .contact{
     height: 55rem;
