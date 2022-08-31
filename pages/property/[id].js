@@ -41,7 +41,7 @@ const Property = () => {
             getImageURL(property.main_image, (url) => setImage(url));
             console.log(image);
         }
-    }, [image]);
+    }, [property.main_image]);
 
 
     useEffect(() => {
