@@ -26,7 +26,7 @@ const PropertyData = () => {
         {
             products && products.map(products =>{
                 return(
-                    <div className="text-white bg red w-full h-44">
+                    <div className="text-white bg red w-full h-44" key={products.id}>
                         hello there
                         <h4>{products.name}</h4>
                         <h4>{products.price}</h4>
