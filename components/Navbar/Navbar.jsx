@@ -20,7 +20,7 @@ const Navbar = () => {
     <div className='w-full z-10 fixed'>
       <div className="w-5/6  flex m-auto justify-between  text-white py-4">
         <div className="logo w-36 md:w-44">
-          <img alt=""
+          <Image alt="" width={40} height ={48}
             src='/images/logo.png'
 
           />

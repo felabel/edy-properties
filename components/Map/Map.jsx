@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Image from 'next/image'
 
 const Map = () => {
   return (
@@ -9,7 +10,7 @@ const Map = () => {
         </div>
         
         <div className="image w-4/5 mx-auto">
-            <img src='/images/map.png' alt='' className='rounded-md' />
+            <Image src='/images/map.png' alt='' className='rounded-md' width="100%" height="50%" layout="responsive" />
         </div>
     </div>
   )

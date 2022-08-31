@@ -3,7 +3,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import Link from 'next/link';
 import PropertyCard from './PropertyCard';
 import useGetProperties from '../../hooks/getProperties';
-
+import Image from 'next/image'
 const Properties = () => {
   
   const properties = useGetProperties();
@@ -29,7 +29,7 @@ const Properties = () => {
           <div className="filter w-28 flex bg-white text-black px-4 py-2 rounded-md justify-between mt-4 md:mt-0 mx-1.5 ">
             <div className=''><span>Filter</span>
             </div>
-            <img src='/images/filter.png' className='w-4 h3.5' />
+            <Image src='/images/filter.png' className='w-4 h3.5' width={16} height={14}/>
           </div>
         </div>
         <div className="w-4/5 md:grid md:grid-cols-3 gap-2  mx-auto">
