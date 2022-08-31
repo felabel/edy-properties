@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import Properties from '../components/property/Properties';
 import propertyData from './propertyData';
@@ -12,21 +12,20 @@ import About from '../components/About/About';
 import Contact from '../components/Contact/Contact';
 import Slide from '../components/slide/Slide';
 const Home = () => {
-   
+
   return (
     <>
       <Layout>
         <Hero />
         <Properties />
-       <propertyData />
         <Map />
         <About />
         <Slide />
         <Contact />
       </Layout>
     </>
-      
-    
+
+
   )
 }
 

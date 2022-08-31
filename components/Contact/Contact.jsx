@@ -12,7 +12,7 @@ const Contact = () => {
                     <p className='text-2xl font-thin ab-small hidden md:block'>Thank you for getting in touch! if <br></br> you find your dream home connect <br></br> with us</p>
                     <p className='md:hidden text-2xl font-thin ab-small'>Thank you for getting in touch! if ou find your dream home connect with us</p>
                 </div>
-                <div className="form mt-8 md:mt-56   md:ml-6  md:w-1/2">
+                <div className="form mt-8 md:mt-56 md:w-1/2">
                     <input type="text" name="" id="" placeholder='Your name'/>
                     <input type="text" name="" id="" placeholder='Your Email'/>
                     <input type="text" name="" id="" placeholder='Phone Number'/>

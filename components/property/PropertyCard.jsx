@@ -1,68 +1,98 @@
 import React, { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
+import { getDownloadURL, getStorage, ref } from 'firebase/storage'
 import Link from 'next/link';
 
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
-import db from '../../firebase';
-const PropertyCard = () => {
- 
+import useGetImageURL from '../../hooks/getImage';
+
+const PropertyCard = (props) => {
+  const { property } = props;
+  const [error, setError] = useState({ error: false, message: "" });
+  const [loading, setLoading] = useState(false);
+
+  const [image, setImage] = useState("");
+  const [image1, setImage1] = useState("");
+  const [image2, setImage2] = useState("");
+  const [image3, setImage3] = useState("");
+  const [image4, setImage4] = useState("");
+
+  const getImageURL = (img, stateSetter) => {
+    const storage = getStorage()
+    const imgRef = ref(storage, img);
+
+    setLoading(true);
+    getDownloadURL(imgRef).then((url) => {
+      stateSetter(url)
+    }).catch((error) => setError({ error: true, message: error.message }))
+
+    setLoading(false);
+
+  }
+  useEffect(() => {
+    getImageURL(property.main_image, (url) => setImage(url));
+    // Imsert function for imge1
+    getImageURL(property.image2, (url) => setImage2(url))
+  }, []);
   return (
-    <>
-      {/* <div className='text-red-400'>each property list</div> */}
-
-      
-        
-        <div className='text-white '>
-          <div className="max-w-sm rounded-md overflow-hidden shadow-lg my-3  card text-white h-100px md:h-auto">
-            <Splide hasTrack={ false } aria-label="..." className='w-full'
-            options={ {
-              rewind: true,
-              width : 800,
-              gap   : '1rem',
-              pagination: false,
-              heightRatio: 0.7,
-              breakpoints: {
-                640: {
-                  // heightRatio: 0.8,
-                },
-              }
-            } }
-            >
-          
+    <div className='text-white '>
+      <div className="max-w-sm rounded-md overflow-hidden shadow-lg my-3  card text-white h-100px md:h-auto">
+        <Splide hasTrack={false} aria-label="..." className='w-full'
+          options={{
+            rewind: true,
+            width: 800,
+            gap: '1rem',
+            pagination: false,
+            heightRatio: 0.7,
+            breakpoints: {
+              640: {
+                // heightRatio: 0.8,
+              },
+            }
+          }}
+        >
 
 
-              <SplideTrack>
-                <SplideSlide className='w-full'>
-                    <div className='h-full'>
-                      <img src="/images/image1.png" alt="Image 1" className='w-full h-full object-cover'/>
-                    </div>
-                  </SplideSlide>
-                <SplideSlide >
-                    <img src="/images/deem-bg.png" alt="Image 2 "className='w-full h-full object-cover'/>
-                </SplideSlide>
-              </SplideTrack>
+
+          <SplideTrack>
+            <SplideSlide className='w-full'>
+              <div className='h-full'>
+                <img src={image ? image : "/images/image1.png"} alt="Image 1" className='w-full h-full object-cover' />
+              </div>
+            </SplideSlide>
+            <SplideSlide className='w-full'>
+              <div className='h-full'>
+                <img src={image2 ? image2 : "/images/image1.png"} alt="Image 1" className='w-full h-full object-cover' />
+              </div>
+            </SplideSlide>
             
-            </Splide>
-            <div className="px-2 pt-4 pb-3 ">
-              <div className="flex justify-between">
-                <div>$1000.00</div>
-                <div className='btn px-4 py-2 text-sm font-semibold'><a>View Details</a></div>
-              </div>
-              <div className="divi flex w-full   border-gray-700 rounded-md  mt-4 ">
-                <p className=''>bedroom</p>
-                <p>icon</p>
-                <p className='noborder'>studio</p>
-              </div>
-            </div>
-          </div>
-         
-        </div>
-      
-    
-      
+          </SplideTrack>
 
-    </>
+        </Splide>
+        <div className="px-5 pt-4 pb-3 ">
+          <div className="flex items-start justify-between">
+            <div className='flex flex-col gap-y-2'>
+              <span>{property.name}</span>
+              <span>₦ {property.price}</span>
+            </div>
+            <Link href={`/property/${property.id}`}><a className='btn px-4 py-2 text-sm font-semibold'>View Details</a></Link>
+          </div>
+          {/* <div className="divi flex w-full   border-gray-700 rounded-md  mt-4 ">
+            <p className=''>{property.no_of_rooms}Bedrooms</p>
+            <p>icon</p>
+            <p className='nobordaaaaaaaer'>studio</p>
+          </div> */}
+
+          <div className="property-meta flex justify-center my-2 border-[0.5px] border-[rgba(255,251,251,0.35)] px-2 rounded-md">
+            <p className=''>{property.no_of_rooms} {`Bedroom${property.no_of_rooms>1?"s":""}`}</p>
+            <p className='text-center'>icon</p>
+            <p className=''>studio</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
   )
 }
 

@@ -261,3 +261,10 @@ body {
 /* ; */
 /* (red: 0.106, green: 0.106, blue: 0.106, alpha: 1) */
 /* rgba 0.11, 0.11, 0.11, 1.0 */
+
+.property-meta p{
+  @apply border-r border-[rgba(255,251,251,0.35)] px-3 text-center py-1 mx-auto;
+}
+.property-meta p:last-child{
+  @apply border-0;
+}

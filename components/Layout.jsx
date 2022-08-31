@@ -1,19 +1,22 @@
 
-import React from 'react'
+import Head from 'next/head'
 import Navbar from './Navbar/Navbar'
 import Footer from './Footer/Footer'
 
 const Layout = ({ children }) => {
   return (
     <>
-        <Navbar />
-        {/* <Navtest /> */}
-        <main>
-            {
-                children
-            }
-        </main>
-        <Footer />
+      <Head>
+        <title>Edynek Properties</title>
+      </Head>
+      <Navbar />
+      {/* <Navtest /> */}
+      <main>
+        {
+          children
+        }
+      </main>
+      <Footer />
     </>
   )
 }
