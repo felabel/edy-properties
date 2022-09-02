@@ -20,6 +20,7 @@ const Property = () => {
     const [loading, setLoading] = useState(false);
 
     const [image, setImage] = useState("");
+    const [image2, setImage2] = useState("");
     
 
     const getImageURL = (img, stateSetter) => {
