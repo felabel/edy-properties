@@ -37,57 +37,19 @@ const Slide = () => {
 
             <SplideTrack>
               <SplideSlide>
-                  <img src="/images/hero.png" alt="Image 1"className='w-full h-full object-cover md:border-4 rounded-sm border-white'/>
+                  <Image src="/images/hero.png" alt="Image 1"className='w-full h-full object-cover md:border-4 rounded-sm border-white'/>
                 </SplideSlide>
               <SplideSlide>
-                  <img src="/images/deem-bg.png" alt="Image 2"className='w-full h-full object-cover md:border-4 rounded-sm border-white'/>
+                  <Image src="/images/deem-bg.png" alt="Image 2"className='w-full h-full object-cover md:border-4 rounded-sm border-white'/>
               </SplideSlide>
               <SplideSlide>
-                  <img src="/images/image2.png" alt="Image 2" className='w-full h-full object-cover md:border-4 rounded-sm border-white'/>
+                  <Image src="/images/image2.png" alt="Image 2" className='w-full h-full object-cover md:border-4 rounded-sm border-white'/>
               </SplideSlide>
-              {/* <SplideSlide>
-                  <img src="/images/hero.png" alt="Image 1"className='w-full h-full object-cover'/>
-                </SplideSlide>
-              <SplideSlide>
-                  <img src="/images/deem-bg.png" alt="Image 2"className='w-full h-full object-cover'/>
-              </SplideSlide> */}
-              {/* <SplideSlide>
-                  <img src="/images/image2.png" alt="Image 2" className='w-full h-full object-cover'/>
-              </SplideSlide>
-              <SplideSlide>
-                  <img src="/images/hero.png" alt="Image 1"className='w-full h-full object-cover'/>
-                </SplideSlide>
-              <SplideSlide>
-                  <img src="/images/deem-bg.png" alt="Image 2"className='w-full h-full object-cover'/>
-              </SplideSlide>
-              <SplideSlide>
-                  <img src="/images/image2.png" alt="Image 2" className='w-full h-full object-cover'/>
-              </SplideSlide> */}
+              
             </SplideTrack>
           
         </Splide>
-        {/* <Splide hasTrack={ false } aria-label="top houses" className='w-56 h-44'>
-          <div className="custom-wrapper">
-            <SplideTrack>
-                <SplideSlide>
-                  <img src="/images/hero.png" alt="Image 1"/>
-                </SplideSlide>
-              <SplideSlide>
-                  <img src="/images/deem-bg.png" alt="Image 2"/>
-              </SplideSlide>
-            </SplideTrack>
-
-
-            <div className="splide__arrows top-10"  />
-            <div className="splide__progress">
-              <div className="splide__progress__bar" />
-            </div>
-            <button className="splide__toggle" type="button">
-              <span className="splide__toggle__play">Play</span>
-              <span className="splide__toggle__pause">Pause</span>
-            </button>
-          </div>
-        </Splide> */}
+       
     </div>
   )
 }

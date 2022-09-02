@@ -29,7 +29,7 @@ const Properties = () => {
           <div className="filter w-28 flex bg-white text-black px-4 py-2 rounded-md justify-between mt-4 md:mt-0 mx-1.5 ">
             <div className=''><span>Filter</span>
             </div>
-            <Image src='/images/filter.png' className='w-4 h3.5' width={16} height={14}/>
+            <Image src='/images/filter.png' className='w-4 h3.5' width={16} height={18} alt=''/>
           </div>
         </div>
         <div className="w-4/5 md:grid md:grid-cols-3 gap-2  mx-auto">
@@ -38,7 +38,7 @@ const Properties = () => {
           }
         </div>
         <div className="view-more text-white grid place-items-center pt-4">
-          <img src='/images/viewmore.png' />
+          <Image src='/images/viewmore.png' />
           <span className='text-center '>View More</span>
         </div>
 

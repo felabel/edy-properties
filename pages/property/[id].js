@@ -44,9 +44,7 @@ const Property = () => {
     }, [property.main_image]);
 
 
-    useEffect(() => {
-        console.log(property);
-    }, [property])
+    
 
 
 

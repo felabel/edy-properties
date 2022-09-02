@@ -58,12 +58,12 @@ const PropertyCard = (props) => {
           <SplideTrack>
             <SplideSlide className='w-full'>
               <div className='h-full'>
-                <img src={image ? image : "/images/image1.png"} alt="Image 1" className='w-full h-full object-cover' />
+                <Image src={image ? image : "/images/image1.png"} alt="Image 1" className='w-full h-full object-cover' />
               </div>
             </SplideSlide>
             <SplideSlide className='w-full'>
               <div className='h-full'>
-                <img src={image2 ? image2 : "/images/image1.png"} alt="Image 1" className='w-full h-full object-cover' />
+                <Image src={image2 ? image2 : "/images/image1.png"} alt="Image 2" className='w-full h-full object-cover' />
               </div>
             </SplideSlide>
             
