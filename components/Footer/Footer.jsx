@@ -5,7 +5,7 @@ const Footer = () => {
     <div className='w-full footer bg-red-500 pt-6'>
       <div className="py-8 w-4/5 grid lg:grid-cols-3 mx-auto  gap-2 text-white justify-between ">
         <div className="footer-text ">
-          <Image src='/images/logo.png' width={44} height={48} />
+          <Image src='/images/logo.png' alt='' width={44} height={48} />
           <p className='text-2xl md:text-base font-semibold'>Dream House</p>
           <p className='mt-4  font-thin text-lg md:text-base'>Dream Home is a gated community <br></br> with a great location. Located <br></br> downtown, you’re within walking <br></br> distance of Parks, and the...<a className='text-brand'>View More</a></p>
         </div>

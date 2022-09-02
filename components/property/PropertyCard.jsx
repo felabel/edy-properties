@@ -35,7 +35,7 @@ const PropertyCard = (props) => {
     getImageURL(property.main_image, (url) => setImage(url));
     // Imsert function for imge1
     getImageURL(property.image2, (url) => setImage2(url))
-  }, []);
+  }, [property.image2, property.main_image]);
   return (
     <div className='text-white '>
       <div className="max-w-sm rounded-md overflow-hidden shadow-lg my-3  card text-white h-100px md:h-auto">

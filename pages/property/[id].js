@@ -20,10 +20,7 @@ const Property = () => {
     const [loading, setLoading] = useState(false);
 
     const [image, setImage] = useState("");
-    const [image1, setImage1] = useState("");
-    const [image2, setImage2] = useState("");
-    const [image3, setImage3] = useState("");
-    const [image4, setImage4] = useState("");
+    
 
     const getImageURL = (img, stateSetter) => {
         const storage = getStorage()
@@ -42,7 +39,7 @@ const Property = () => {
             getImageURL(property.main_image, (url) => setImage(url));
             console.log(image);
         }
-    }, [property.main_image]);
+    }, [property.main_image, image]);
 
 
     
