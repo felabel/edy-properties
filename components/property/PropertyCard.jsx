@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { getDownloadURL, getStorage, ref } from 'firebase/storage'
 import Link from 'next/link';
+import Image from 'next/image'
 
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
@@ -58,12 +59,12 @@ const PropertyCard = (props) => {
           <SplideTrack>
             <SplideSlide className='w-full'>
               <div className='h-full'>
-                <Image src={image ? image : "/images/image1.png"} alt="Image 1" className='w-full h-full object-cover' />
+                <Image src={image ? image : "/images/image1.png"} alt="Image 1" layout='fill' className='w-full h-full object-cover' />
               </div>
             </SplideSlide>
             <SplideSlide className='w-full'>
               <div className='h-full'>
-                <Image src={image2 ? image2 : "/images/image1.png"} alt="Image 2" className='w-full h-full object-cover' />
+                <Image src={image2 ? image2 : "/images/image1.png"} alt="Image 2" layout='fill' className='w-full h-full object-cover' />
               </div>
             </SplideSlide>
             

@@ -1,6 +1,7 @@
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import React from 'react'
+import Image from 'next/image';
 
 const Slide = () => {
   return (
@@ -37,13 +38,13 @@ const Slide = () => {
 
             <SplideTrack>
               <SplideSlide>
-                  <Image src="/images/hero.png" alt="Image 1"className='w-full h-full object-cover md:border-4 rounded-sm border-white'/>
+                  <Image src="/images/hero.png" layout='fill' alt="Image 1"className='w-full h-full object-cover md:border-4 rounded-sm border-white'/>
                 </SplideSlide>
               <SplideSlide>
-                  <Image src="/images/deem-bg.png" alt="Image 2"className='w-full h-full object-cover md:border-4 rounded-sm border-white'/>
+                  <Image src="/images/deem-bg.png" layout='fill' alt="Image 2"className='w-full h-full object-cover md:border-4 rounded-sm border-white'/>
               </SplideSlide>
               <SplideSlide>
-                  <Image src="/images/image2.png" alt="Image 2" className='w-full h-full object-cover md:border-4 rounded-sm border-white'/>
+                  <Image src="/images/image2.png" layout='fill' alt="Image 2" className='w-full h-full object-cover md:border-4 rounded-sm border-white'/>
               </SplideSlide>
               
             </SplideTrack>

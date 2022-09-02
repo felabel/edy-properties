@@ -38,7 +38,7 @@ const Properties = () => {
           }
         </div>
         <div className="view-more text-white grid place-items-center pt-4">
-          <Image src='/images/viewmore.png' />
+          <Image src='/images/viewmore.png' width={22} height={22} alt=''/>
           <span className='text-center '>View More</span>
         </div>
 
