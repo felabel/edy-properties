@@ -20,11 +20,11 @@ const Navbar = () => {
     <div className='w-full z-10 fixed'>
       <div className="w-5/6  flex m-auto justify-between  text-white py-4">
         <div className="logo w-36 md:w-44">
-          <a href='/'>
+          <Link href='/'>
             <img alt="" 
               src='/images/logo.png'
             />
-          </a>
+          </Link>
            
         </div>
         <div className="links lg:flex gap-6 my-auto font-semibold text-sm font-inter hidden">
