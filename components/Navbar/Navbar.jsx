@@ -20,16 +20,18 @@ const Navbar = () => {
     <div className='w-full z-10 fixed'>
       <div className="w-5/6  flex m-auto justify-between  text-white py-4">
         <div className="logo w-36 md:w-44">
-          <Image alt="" width={40} height ={48}
-            src='/images/logo.png'
-
-          />
+          <a href='/'>
+            <img alt="" 
+              src='/images/logo.png'
+            />
+          </a>
+           
         </div>
         <div className="links lg:flex gap-6 my-auto font-semibold text-sm font-inter hidden">
-          <div className='btn pointer bg-transparent text-white hover:bg-transparent'><Link href='/'><a onClick={()=>setTitle(title+1)}>Home</a></Link></div>
-          <div className='btn pointer bg-transparent text-white hover:bg-transparent'><Link href='/'>About Us</Link></div>
-          <div className='btn pointer bg-transparent text-white hover:bg-transparent'><Link href='/'>Other Projects</Link></div>
-          <div className='btn pointer '><Link href='/'>Enquire Now</Link></div>
+          <div className='btn pointer bg-transparent text-white hover:bg-transparent'><Link href=''><a onClick={()=>setTitle(title+1)}>Home</a></Link></div>
+          <div className='btn pointer bg-transparent text-white hover:bg-transparent'><Link href='#about'>About Us</Link></div>
+          <div className='btn pointer bg-transparent text-white hover:bg-transparent'><Link href='#projects'>Other Projects</Link></div>
+          <div className='btn pointer '><Link href='#contact'>Enquire Now</Link></div>
         </div>
         <div className="mobile-menu  lg:hidden ">
           <button onClick={() => setIsOpen(!isOpen)}>

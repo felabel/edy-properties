@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Slide = () => {
   return (
-    <div className='w-full mb-8 md:mb-0 md:mt-44 pt-8 slide-container' >
+    <div className='w-full mb-8 md:mb-0 md:mt-44 pt-8 slide-container' id='projects'>
       <div className='text text-center my-6'>
         <p className='text-brand font-semibold text-3xl'>Other Projects</p>
         <p className='text-lg md:text-base text-white'>Other projects by us in different locations </p>

@@ -13,11 +13,11 @@ const PropertyCard = (props) => {
   const [error, setError] = useState({ error: false, message: "" });
   const [loading, setLoading] = useState(false);
 
-  const [image, setImage] = useState("");
   const [image1, setImage1] = useState("");
   const [image2, setImage2] = useState("");
   const [image3, setImage3] = useState("");
   const [image4, setImage4] = useState("");
+  const [image5, setImage5] = useState("");
 
   const getImageURL = (img, stateSetter) => {
     const storage = getStorage()
@@ -32,10 +32,10 @@ const PropertyCard = (props) => {
 
   }
   useEffect(() => {
-    getImageURL(property.main_image, (url) => setImage(url));
+    getImageURL(property.image1, (url) => setImage1(url));
     // Imsert function for imge1
     getImageURL(property.image2, (url) => setImage2(url))
-  }, [property.image2, property.main_image]);
+  }, [property.image2, property.image1]);
   return (
     <div className='text-white '>
       <div className="max-w-sm rounded-md overflow-hidden shadow-lg my-3  card text-white h-100px md:h-auto">
@@ -59,7 +59,7 @@ const PropertyCard = (props) => {
           <SplideTrack>
             <SplideSlide className='w-full'>
               <div className='h-full'>
-                <Image src={image ? image : "/images/image1.png"} alt="Image 1" layout='fill' className='w-full h-full object-cover' />
+                <Image src={image1 ? image1 : "/images/image1.png"} alt="Image 1" layout='fill' className='w-full h-full object-cover' />
               </div>
             </SplideSlide>
             <SplideSlide className='w-full'>
@@ -87,7 +87,7 @@ const PropertyCard = (props) => {
 
           <div className="property-meta flex justify-center my-2 border-[0.5px] border-[rgba(255,251,251,0.35)] px-2 rounded-md">
             <p className=''>{property.no_of_rooms} {`Bedroom${property.no_of_rooms>1?"s":""}`}</p>
-            <p className='text-center'>icon</p>
+            <p className='text-center'>{property.bath} {`Bath${property.bath>1?"s":""}`}</p>
             <p className=''>studio</p>
           </div>
         </div>

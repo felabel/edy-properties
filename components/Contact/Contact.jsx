@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className="w-full contact  primary-bg bg-[url('/images/Subtract.png')] bg-no-repeat bg-cover mt-8" >
+    <div id='contact' className="w-full contact  primary-bg bg-[url('/images/Subtract.png')] bg-no-repeat bg-cover mt-8" >
         <div className="overlay w-full z-1 overlay absolute">
             <div className=" w-full  absolute  text-white blur-ab"></div>
 

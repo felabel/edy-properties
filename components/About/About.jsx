@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <div>
-        <div className='w-full about'>
+        <div className='w-full about' id='about'>
             <div className="w-full   primary-bg bg-[url('/images/deem-bg.png')] bg-no-repeat bg-cover pb-4" >
                 <div className="overlay w-full  overlay absolute">
 

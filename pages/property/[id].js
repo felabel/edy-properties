@@ -19,8 +19,11 @@ const Property = () => {
     const [error, setError] = useState({ error: false, message: "" });
     const [loading, setLoading] = useState(false);
 
-    const [image, setImage] = useState("");
+    const [image1, setImage1] = useState("");
     const [image2, setImage2] = useState("");
+    const [image3, setImage3] = useState("");
+    const [image4, setImage4] = useState("");
+    const [image5, setImage5] = useState("");
     
 
     const getImageURL = (img, stateSetter) => {
@@ -36,11 +39,27 @@ const Property = () => {
 
     }
     useEffect(() => {
-        if (property.main_image) {
-            getImageURL(property.main_image, (url) => setImage(url));
-            console.log(image);
+        if (property.image1) {
+            getImageURL(property.image1, (url) => setImage1(url));
+            console.log(image1);
         }
-    }, [property.main_image, image]);
+        if (property.image2) {
+            getImageURL(property.image2, (url) => setImage2(url));
+            console.log(image2);
+        }
+        if (property.image3) {
+            getImageURL(property.image3, (url) => setImage3(url));
+            console.log(image3);
+        }
+        if (property.image4) {
+            getImageURL(property.image4, (url) => setImage4(url));
+            console.log(image4);
+        }
+        if (property.image5) {
+            getImageURL(property.image5, (url) => setImage5(url));
+            console.log(image5);
+        }
+    }, [property.image1, image1, image2, image3, image4, image5]);
 
 
     
@@ -78,58 +97,77 @@ const Property = () => {
                         }
 
                     }}>
-                       { image && <SplideSlide>
-                            <Image src={image} alt="Image 1" layout='fill'  className='w-full h-full object-cover border-4 rounded-sm border-white' />
+                       { image1 && <SplideSlide>
+                            <img src={image1} alt="Image 1" layout='fill'  className='w-full h-full object-cover border-4 rounded-sm border-white' />
                         </SplideSlide>}
+                        { image2 && 
+                            <SplideSlide>
+                                <img src={image2} alt="Image 2" layout='fill' className='w-full h-full object-cover border-4 rounded-sm border-white' />
+                            </SplideSlide> 
+                        }
+                        { image3 && 
                         <SplideSlide>
-                            <Image src="/images/deem-bg.png" alt="Image 2" layout='fill' className='w-full h-full object-cover border-4 rounded-sm border-white' />
+                            <img src={image3} alt="Image 2" layout='fill' className='w-full h-full object-cover border-4 rounded-sm border-white' />
                         </SplideSlide>
+                        }
+                        { image4 && 
                         <SplideSlide>
-                            <Image src="/images/image2.png" alt="Image 2" layout='fill' className='w-full h-full object-cover border-4 rounded-sm border-white' />
+                            <img src={image4} alt="Image 2" layout='fill' className='w-full h-full object-cover border-4 rounded-sm border-white' />
                         </SplideSlide>
+                        }
+                        { image5 && 
+                        <SplideSlide>
+                            <img src={image5} alt="Image 2" layout='fill' className='w-full h-full object-cover border-4 rounded-sm border-white' />
+                        </SplideSlide>
+                        }
                     </Splide>
                     <div className='details w-4/5 mx-auto my-8'>
                         <div className='flex justify-between'>
-                            {/* <p className='details-text font-semibold text-xl'>₦{property.price && property.price.toLocaleString("en-US")}</p> */}
-                            <p className='text-white'>{image}</p>
-                            <Image width={22} height={22} src='/images/share.png' alt=''/>
+                            <p className='details-text font-semibold text-xl'>₦{property.price && property.price.toLocaleString("en-US")} / year</p>
+                            {/* <p className='text-white'>{image1}</p> */}
+                            <img src='/images/share.png' alt=''/>
                         </div>
 
                         <div className='flex mr-4 mb-6 mt-2'>
                             <span className='details-text mr-4'>535 sq ft</span>
                             <div className='flex'>
-                                <div className='mr-4'><Image width={22} height={22}  src='/images/bed.png ' alt='' /></div>
-                                <div className='details-text -ml-3 mr-3'>1 bedroom</div>
+                                <div className='mr-4'><img    src='/images/bed.png ' alt='' /></div>
+                                <div className='details-text -ml-3 mr-3'>{property.no_of_rooms} {`Bedroom${property.no_of_rooms>1?"s":""}`}</div>
+
                             </div>
 
                             <div className='flex'>
-                                <div className='mr-4'><Image src='/images/bath.png'width={22} height={22} alt='' /></div>
-                                <div className='details-text -ml-3'>1 bath</div>
+                                <div className='mr-4'><img src='/images/bath.png'  alt='' /></div>
+                                <div className='details-text -ml-3'>{property.bath} {`Bath${property.bath>1?"s":""}`}</div>
                             </div>
                         </div>
+                        <div className="desc mb-4 details-text">{property.description}</div>
+                        <div className="desc mb-4 details-text">contact agent: {property.mobile}</div>
+
 
                         <div className='btn px-4 py-2 text-sm font-semibold '><a>Enquire</a></div>
 
                         <div className='features-text mt-6 hidden lg:block'>
                             <p className='text-brand text-2xl font-semibold mb-8'>Features</p>
                             <div className='icons flex justify-between details-text'>
-                                <div className='feature w-6'><Image src='/images/elevate.png'  width={22} height={22} alt=''/><span className='text-sm text-center'>Elevator</span></div>
-                                <div className='feature w-6'><Image src='/images/laundary.png'  width={22} height={22} alt=''/><span className='text-sm text-center'>Laundary  Facilities</span></div>
-                                <div className='feature w-6'><Image src='/images/closet.png'  width={22} height={22} alt=''/><span className='text-sm text-center'>Walk in Closet</span></div>
-                                <div className='feature w-6'><Image src='/images/fireplace.png'  width={22} height={22} alt=''/><span className='text-sm text-center'>Fire Place</span></div>
-                                <div className='feature w-6'><Image src='/images/balcony.png'  width={22} height={22} alt=''/><span className='text-sm text-center'>Balcony</span></div>
-                                <div className='feature w-6'><Image src='/images/park.png'  width={22} height={22} alt=''/><span className='text-sm text-center'>Garden</span></div>
+                                <div className='feature w-6'><img src='/images/elevate.png'    alt=''/><span className='text-sm text-center'>Elevator</span></div>
+                                <div className='feature w-6'><img src='/images/laundary.png'    alt=''/><span className='text-sm text-center'>Laundary  Facilities</span></div>
+                                <div className='feature w-6'><img src='/images/closet.png'    alt=''/><span className='text-sm text-center'>Walk in Closet</span></div>
+                                <div className='feature w-6'><img src='/images/fireplace.png'    alt=''/><span className='text-sm text-center'>Fire Place</span></div>
+                                <div className='feature w-6'><img src='/images/balcony.png'    alt=''/><span className='text-sm text-center'>Balcony</span></div>
+                                <div className='feature w-6'><img src='/images/park.png'    alt=''/><span className='text-sm text-center'>Garden</span></div>
                             </div>
 
 
 
                         </div>
+                        {/* mobile */}
                         <div className='features-text mt-6 lg:hidden'>
                             <p className='text-brand text-2xl font-semibold mb-8'>Features</p>
                             <div className='icons flex justify-between details-text'>
-                                <div className='feature w-6'><Image src='/images/elevate.png' width={22} height={22} alt='' /><span className='text-sm text-center'>Elevator</span></div>
-                                <div className='feature w-6'><Image src='/images/laundary.png' width={22} height={22} alt='' /><span className='text-sm text-center'>Laundary  Facilities</span></div>
-                                <div className='feature w-6'><Image src='/images/closet.png' width={22} height={22} alt='' /><span className='text-sm text-center'>Walk in Closet</span></div>
+                                <div className='feature w-6'><img src='/images/elevate.png'   alt='' /><span className='text-sm text-center'>Elevator</span></div>
+                                <div className='feature w-6'><img src='/images/laundary.png'   alt='' /><span className='text-sm text-center'>Laundary  Facilities</span></div>
+                                <div className='feature w-6'><img src='/images/closet.png'   alt='' /><span className='text-sm text-center'>Walk in Closet</span></div>
                             </div>
 
 
@@ -137,9 +175,9 @@ const Property = () => {
                         </div>
                         <div className='features-text mt-6 lg:hidden'>
                             <div className='icons flex justify-between details-text'>
-                                <div className='feature w-6'><Image src='/images/elevate.png' width={22} height={22} alt='' /><span className='text-sm text-center'>Elevator</span></div>
-                                <div className='feature w-6'><Image src='/images/laundary.png' width={22} height={22} alt='' /><span className='text-sm text-center'>Laundary  Facilities</span></div>
-                                <div className='feature w-6'><Image src='/images/closet.png'  width={22} height={22} alt=''/><span className='text-sm text-center'>Walk in Closet</span></div>
+                                <div className='feature w-6'><img src='/images/elevate.png'   alt='' /><span className='text-sm text-center'>Elevator</span></div>
+                                <div className='feature w-6'><img src='/images/laundary.png'   alt='' /><span className='text-sm text-center'>Laundary  Facilities</span></div>
+                                <div className='feature w-6'><img src='/images/closet.png'    alt=''/><span className='text-sm text-center'>Walk in Closet</span></div>
                             </div>
 
 

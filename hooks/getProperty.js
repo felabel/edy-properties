@@ -7,7 +7,7 @@ export default function useGetProperty(id) {
     const [property, setProperty] = useState({});
 
         const fetch = async () => {
-            const ref = doc(db, "products", id)
+            const ref = doc(db, "properties", id)
             const docSnap = await getDoc(ref);
             setProperty(docSnap.data());
         }

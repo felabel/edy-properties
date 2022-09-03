@@ -7,7 +7,7 @@ export default function useGetProperties() {
 
     useEffect(() => {
         (async () => {
-            const colRef = collection(db, 'products');
+            const colRef = collection(db, 'properties');
 
             const snapshots = await getDocs(colRef)
 

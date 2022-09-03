@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import Link from 'next/link';
-import PropertyCard from './PropertyCard';
-import useGetProperties from '../../hooks/getProperties';
+import PropertyCard from '../components/property/PropertyCard';
+import useGetProperties from '../hooks/getProperties';
 import Image from 'next/image'
-const Properties = () => {
+import Navbar from '../components/Navbar/Navbar';
+import Footer from '../components/Footer/Footer';
+const Listings = () => {
   
   const properties = useGetProperties();
   const [modProduct, setModProducts] = useState([]);
@@ -18,7 +20,9 @@ const Properties = () => {
   }
   return (
     <>
+    <Navbar />
       <div className="w-full h-auto z-6 properties">
+        <p>Hello there</p>
         <div className="w-4/5 mx-auto features text-white md:flex justify-between py-6  ">
           <div className='flex features-con md:-ml-2  justify-around'>
             <span className=''>All</span>
@@ -49,9 +53,9 @@ const Properties = () => {
 
 
 
-
+    <Footer />
     </>
   )
 }
 
-export default Properties
+export default Listings
