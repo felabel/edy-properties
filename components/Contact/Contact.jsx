@@ -1,6 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { collection, addDoc } from 'firebase/firestore';
+
+import db from '../../firebase';
+
+
 
 const Contact = () => {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [phoneNumber, setPhoneNumber] = useState('')
+    const [message, setMessage] = useState('')
+
+    const colRef = collection(db, 'contact');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+     
+        let details = {
+            name:name,
+            email:email,
+            phoneNumber:phoneNumber,
+            message:message
+        }
+        addDoc(colRef, {
+            details
+        })
+        .then(() => {
+            document.location='/'
+        })
+        .catch((error) => {
+            alert(error.message)
+        });
+        setName('')
+        setEmail('')
+        setPhoneNumber('')
+        setMessage('')
+        alert('submitted')
+    }
   return (
     <div id='contact' className="w-full contact  primary-bg bg-[url('/images/Subtract.png')] bg-no-repeat bg-cover mt-8" >
         <div className="overlay w-full z-1 overlay absolute">
@@ -12,18 +48,31 @@ const Contact = () => {
                     <p className='text-2xl font-thin ab-small hidden md:block'>Thank you for getting in touch! if <br></br> you find your dream home connect <br></br> with us</p>
                     <p className='md:hidden text-2xl font-thin ab-small'>Thank you for getting in touch! if ou find your dream home connect with us</p>
                 </div>
-                <div className="form mt-8 md:mt-56 md:w-1/2">
-                    <input type="text" name="" id="" placeholder='Your name'/>
-                    <input type="text" name="" id="" placeholder='Your Email'/>
-                    <input type="text" name="" id="" placeholder='Phone Number'/>
-                    <select name="" id="">
-                        <option value="">flat</option>
-                        <option value="">self con</option>
-                    </select>
-                    <textarea name="" id="" cols="58" rows="1" placeholder='message'></textarea>
-                    <button type='submit' className='btn block px-8 py-2 mt-14 md:mt-16 font-semibold'>Submit</button>
+                    <div className="form mt-8 md:mt-56 md:w-1/2">
+                        <form className='form' onSubmit={handleSubmit}>
+                            <input type="text" name="name" id="" placeholder='Your name' 
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                            />
+                            <input type="text" name="email" id="" placeholder='Your Email'
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                            <input type="text" name="phoneNumber" id="" placeholder='Phone Number'
+                                value={phoneNumber}
+                                onChange={(e) => setPhoneNumber(e.target.value)}
+                            />
+                            
+                            <textarea name="message" id="" cols="58" rows="1" placeholder='message'
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
+                            ></textarea>
+                            <button type='submit' className='btn block px-8 py-2 mt-14 md:mt-16 font-semibold'>Submit</button>
 
-                </div>
+                        </form>
+                        
+                    </div>  
+                
 
             </div>
             {/* <div className="overlay w-full z-2 absolute  text-white blur-ab-down"></div> */}
