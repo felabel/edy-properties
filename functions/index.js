@@ -1,50 +1,69 @@
-import { auth } from 'firebase-admin';
-import functions from 'firebase-functions';
-import nodemailer from 'nodemailer'
+const functions = require("firebase-functions");
+const nodemailer = require('nodemailer');
 
-const cors = require('cors')({
-    origin: true
-})
-const gmailEmail = functions.config().gmail.email
-const gmailPassword = functions.config().gmail.password
+//when this cloud function is already deployed, change the origin to 'https://your-deployed-app-url
+const cors = require('cors')({ origin: true });
 
-const mailTransport = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: gmailEmail,
-    pass: gmailPassword,
-  },
-})
+//create and config transporter
+let transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, // true for 465, false for other ports
+    requireTLC:true,
+    auth: {
+      user: 'felicityabel2016@gmail.com',
+      pass: `rjylkfgezaxhqbjc`,
+    },
+  });
 
-exports.submit = functions.https.onRequest((req, res) => {
-  res.set('Access-Control-Allow-Origin', '*')
-  res.set('Access-Control-Allow-Methods', 'GET, PUT, POST, OPTIONS')
-  res.set('Access-Control-Allow-Headers', '*')
+  exports.sendEmail = functions.https.onRequest((req, res) => {
+    console.log('hello there')
+    console.log(
+        'from sendEmail function. The request object is:',
+        JSON.stringify(req.body)
+    )
 
-  if (req.method === 'OPTIONS') {
-    res.end()
-  } else {
-    cors(req, res, () => {
-      if (req.method !== 'POST') {
-        return
-      }
+     //enable CORS using the `cors` express middleware.
+  cors(req, res, () => {
+    //get contact form data from the req and then assigned it to variables
+    const email = req.body.data.email;
+    const name = req.body.data.name;
+    const phoneNumber = req.body.data.phoneNumber;
+    const message = req.body.data.message;
 
-      const mailOptions = {
-        from: req.body.email,
-        replyTo: req.body.email,
-        to: gmailEmail,
-        subject: `${req.body.name} just messaged me from my website`,
-        text: req.body.message,
-        html: `<p>${req.body.message}</p>`,
-      }
+    //config the email message
+    const mailOptions = {
+      from: email,
+      to: [
+        'godfredakpan@gmail.com',
+        'felicityabel99@gmail.com'
+      ],
+      subject: 'message from edy-nek',
+      text: `${name} says: ${message} ${phoneNumber}`,
+      replyTo : email,
+    //   Html : this.text
+    };
 
-      return mailTransport.sendMail(mailOptions).then(() => {
-        console.log('New email sent to:', gmailEmail)
-        res.status(200).send({
-          isEmailSend: true
-        })
-        return
-      })
-    })
-  }
-})
+    //call the built in `sendMail` function and return different responses upon success and failure
+    return transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        return res.status(500).send({
+          data: {
+            status: 500,
+            message: error.toString(),
+          },
+        });
+      } else
+
+      return res.status(200).send({
+        data: {
+          status: 200,
+          message: 'sent',
+        },
+      });
+    });
+  });
+
+  })
+
+   

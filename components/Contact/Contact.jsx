@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { collection, addDoc } from 'firebase/firestore';
 
 import db from '../../firebase';
-
+import axios from 'axios';
 
 
 const Contact = () => {
@@ -15,6 +15,19 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        axios({
+            method: "POST",
+            url:"/send",
+            data: details
+        }).then((response)=>{
+            if (response.data.status === 'success'){
+                alert("Message Sent."); 
+                
+            }else if(response.data.status === 'fail'){
+                alert("Message failed to send.")
+            }
+          })
      
         let details = {
             name:name,
@@ -35,7 +48,8 @@ const Contact = () => {
         setEmail('')
         setPhoneNumber('')
         setMessage('')
-        alert('submitted')
+
+
     }
   return (
     <div id='contact' className="w-full contact  primary-bg bg-[url('/images/Subtract.png')] bg-no-repeat bg-cover mt-8" >

@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import About from '../components/About/About';
 import Contact from '../components/Contact/Contact';
 import Slide from '../components/slide/Slide';
+import ContactTest from '../components/Contact/ContactTest';
 const Home = () => {
 
   return (
@@ -16,7 +17,8 @@ const Home = () => {
         <Map />
         <About />
         <Slide />
-        <Contact />
+        {/* <Contact /> */}
+        <ContactTest />
       </Layout>
     </>
 
