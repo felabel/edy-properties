@@ -6,6 +6,7 @@ import useGetProperties from '../hooks/getProperties';
 import Image from 'next/image'
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
+import Properties from '../components/property/Properties';
 const Listings = () => {
   
   const properties = useGetProperties();
@@ -19,9 +20,9 @@ const Listings = () => {
     // const filtered = properties.filter((property)=>property.)
   }
   return (
-    <>
+    <div >
     <Navbar />
-      <div className="w-full h-auto z-6 properties">
+      {/* <div className="w-full h-auto z-6 properties">
         <p>Hello there</p>
         <div className="w-4/5 mx-auto features text-white md:flex justify-between py-6  ">
           <div className='flex features-con md:-ml-2  justify-around'>
@@ -49,12 +50,17 @@ const Listings = () => {
 
 
 
+      </div> */}
+      <div className='pt-20 '>
+        {/* hello */}
+        <Properties />
       </div>
+      
 
 
 
     <Footer />
-    </>
+    </div>
   )
 }
 

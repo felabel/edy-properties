@@ -15,7 +15,7 @@ const Hero = () => {
 
           </div>
 
-        <div className=" w-full z-3  absolute blur-down">hello there</div>
+        <div className=" w-full z-3  absolute blur-down"></div>
 
       </div>
       {/* <div className="mobile md:hidden bg-red-400 w-full h-24">

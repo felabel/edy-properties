@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, Firestore } from 'firebase/firestore';
 
-import db from '../../firebase';
-import axios from 'axios';
 
 
 
