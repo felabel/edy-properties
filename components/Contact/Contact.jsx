@@ -39,7 +39,9 @@ const Contact = () => {
             details
         })
         .then(() => {
-            document.location='/'
+            // document.location='/'
+        e.preventDefault();
+
         })
         .catch((error) => {
             alert(error.message)

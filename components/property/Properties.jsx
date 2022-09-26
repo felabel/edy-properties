@@ -17,10 +17,10 @@ const Properties = () => {
 
   const filterProperties = () => {
     properties.filter((property)=>property.name.includes('Two Bedroom flat')).map(filteredProperty => (
-      console.log(filteredProperty),
-        <div className="w-4/5 md:grid md:grid-cols-3 gap-2  mx-auto">
-          {filteredProperty}
-        </div> 
+      console.log(filteredProperty)
+        // <div className="w-4/5 md:grid md:grid-cols-3 gap-2  mx-auto">
+        //   {filteredProperty}
+        // </div> 
     ))
   }
 

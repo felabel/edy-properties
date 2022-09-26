@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { doc, getDoc } from 'firebase/firestore';
 import db from '../firebase';
+import { useRouter } from "next/router";
+
 
 
 export default function useGetProperty(id) {
@@ -12,7 +14,7 @@ export default function useGetProperty(id) {
             setProperty(docSnap.data());
         }
     useEffect(() => {
-        fetch()
-    }, [])
+       id && fetch()
+    }, [id])
     return property;
 }
